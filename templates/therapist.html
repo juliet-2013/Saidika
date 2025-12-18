@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Therapist Contact Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #eef4f7;
+            padding: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #0fb9b1;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #444;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            background: #0fb9b1;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: #0aa79f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>⚠ Emergency Contact Needed</h2>
+
+    <p>A high-risk alert was detected for:</p>
+    <h3>{{ email }}</h3>
+
+    <p>Please reach out to them immediately.</p>
+
+    <!-- EMAIL -->
+    <a class="btn" href="mailto:{{ email }}?subject=Emergency Support&body=We noticed you may need support.">
+        📧 Email User
+    </a>
+
+    <!-- WHATSAPP -->
+    <a class="btn" style="background:#25D366;"
+       href="https://wa.me/254795520633?text=URGENT:%20High-risk%20alert%20for%20{{ email }}."
+       target="_blank">
+        💬 WhatsApp Therapist
+    </a>
+
+</div>
+
+</body>
+</html>

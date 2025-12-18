@@ -1,0 +1,70 @@
+/* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+nav {
+    background: white;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Card container */
+.card {
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Chat messages */
+.chat-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+}
+
+.chat-input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #217dbb;
+}
+
+/* Mood tracker box */
+.box {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saidika Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background:#f3f7fa;
+            margin:0;
+            padding:0;
+        }
+
+        .container {
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color:#0fb9b1;
+            font-weight:600;
+            margin-bottom:10px;
+        }
+
+        .subtitle {
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        .cards {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap:20px;
+        }
+
+        .card {
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            text-align:center;
+            transition:0.3s;
+        }
+
+        .card:hover {
+            transform:translateY(-4px);
+            box-shadow:0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            margin:10px 0;
+            font-weight:600;
+            color:#333;
+        }
+
+        .card p {
+            color:#666;
+            font-size:14px;
+        }
+
+        .btn {
+            margin-top:15px;
+            display:inline-block;
+            padding:10px 18px;
+            background:#0fb9b1;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:600;
+        }
+
+        .btn:hover {
+            background:#0aa79f;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav style="
+    background:white; 
+    padding:12px 18px; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    font-family:'Poppins';
+    position:sticky;
+    top:0;">
+    <a href="/home" style="margin-right:15px; text-decoration:none; color:#0fb9b1; font-weight:500;">Home</a>
+    <a href="/chat" style="margin-right:15px; text-decoration:none; color:#0fb9b1;">Chat</a>
+    <a href="/tracker" style="margin-right:15px; text-decoration:none; color:#0fb9b1;">Tracker</a>
+    <a href="/advisor" style="margin-right:15px; text-decoration:none; color:#0fb9b1;">Advisor</a>
+    <a href="/report" style="margin-right:15px; text-decoration:none; color:#0fb9b1;">Report</a>
+    <a href="/logout" style="float:right; text-decoration:none; color:#ff4d4d;">Logout</a>
+    <span style="float:right; margin-right:15px; color:#666;">{{ user }}</span>
+</nav>
+
+<div class="container">
+
+    <h2>Hello, {{ user }}</h2>
+    <p class="subtitle">Welcome back! Choose where you’d like to go.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Chat with Saidika</h3>
+            <p>Talk to the mental health assistant for support, comfort, or guidance.</p>
+            <a href="/chat" class="btn">Open Chat</a>
+        </div>
+
+        <div class="card">
+            <h3>Mood Tracker</h3>
+            <p>Record how you feel every day and track emotional patterns.</p>
+            <a href="/tracker" class="btn">Track Mood</a>
+        </div>
+
+        <div class="card">
+            <h3>Counsellor Overview</h3>
+            <p>View flagged messages and user risk alerts.</p>
+            <a href="/advisor" class="btn">View Panel</a>
+        </div>
+
+        <div class="card">
+            <h3>Progress Report</h3>
+            <p>View graphs and history of your mood entries.</p>
+            <a href="/report" class="btn">Open Report</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
